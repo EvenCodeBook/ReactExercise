@@ -1,4 +1,35 @@
+
 import React, { Component } from 'react';
+import './App.css';
+
+
+class App extends Component{
+  render(){
+    return(
+    <div className="App">
+      <header className="App-header">header</header>
+      <menu className="App-menu">
+
+      </menu>
+      <content className="App-content">
+
+      </content>
+
+      <footer className="App-footer">icon</footer>
+    </div>
+    );
+
+  }
+
+}
+
+
+
+export default App;
+
+
+
+//import React, { Component } from 'react';
 //import logo from './logo.svg';
 //import './App.css';
 
@@ -19,27 +50,4 @@ import React, { Component } from 'react';
 //   }
 // }
 
-
-class App extends Component{
-  render(){
-    return(
-    <div className="App">
-      <header id="App-Header">CodeBook</header>
-      <menu id="App-Menu"
-      
-      ></menu>
-      <content id="App-Content">
-
-      </content>
-
-      <footer id="App-Footer">Even</footer>
-    </div>
-    );
-
-  }
-
-}
-
-
-
-export default App;
+//export default App;
