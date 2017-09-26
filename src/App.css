@@ -2,26 +2,66 @@
   text-align: center;
 }
 
+.App-clearfix{
+  clear: both;
+}
+
+/* header */
 .App-header{
   background-color: black;
-  color: white;
+  color: red;
   z-index: 9999;
   height: 40px;
   width: 100%;
   position: fixed;
   top: 0px;
 }
+
+.App-title{
+  float: left;
+  line-height: 40px;
+  font-size: 15px; 
+  width: 33.3333%;
+}
+
+#App-menu{
+  text-align: left;
+}
+
+#App-logo{
+  text-align: center;
+}
+
+#App-login{
+  text-align: right;
+}
+/* header */
+
+/* content */
+.App-content{
+  position: relative;
+  top:40px;
+}
+/* content */
+
+
+/* footer */
 .App-footer{
   background-color: black;
-  color: white;
+  color: red;
   z-index: 9998;
-  height: 40px;
+  height: 30px;
   width: 100%;
   position: fixed;
   bottom: 0px;
-
 }
-
+.App-icon{
+  float: left;
+  line-height: 30px;
+  font-size: 15px; 
+  width: 33.3333%;
+}
+/* footer */
 
 
 

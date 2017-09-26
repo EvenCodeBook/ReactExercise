@@ -1,33 +1,54 @@
 
 import React, { Component } from 'react';
 import './App.css';
-
+import Home from './Home';
 
 class App extends Component{
-  render(){
-    return(
-    <div className="App">
-      <header className="App-header">header</header>
-      <menu className="App-menu">
-
-      </menu>
-      <content className="App-content">
-
-      </content>
-
-      <footer className="App-footer">icon</footer>
-    </div>
-    );
+  constructor(props){
+    super(props);
+    this.state = {page:0};
 
   }
+  render(){
+  let info = null;
+  if(this.state.page === 0) info =<Home />;
+  else if(this.state.page === 1) info="search";
+  else if(this.state.page === 2) info="about";
 
+    return(
+    <div className="App">
+      <header className="App-header">
+        <div className="App-title" id="App-menu">menu</div>
+        <div className="App-title" id="App-logo">logo</div>
+        <div className="App-title" id="App-login">Login</div>
+        <div className="App-clearfix"></div>
+      </header>
+      
+      <content className="App-content">
+        {info}
+      </content>
+
+      <footer className="App-footer">
+        <div className="App-icon" onClick={this.updateHome.bind(this)}>Home</div>
+        <div className="App-icon" onClick={this.updateSeachr.bind(this)}>Search</div>
+        <div className="App-icon" onClick={this.updateAbout.bind(this)}>About</div>
+        <div className="App-clearfix"></div>
+      </footer>
+    </div>
+    );
+  }
+  updateHome(){
+    this.setState({page:0});    
+  }
+  updateSeachr(){
+    this.setState({page:1});
+  }
+  updateAbout(){
+    this.setState({page:2});
+  }
 }
 
-
-
 export default App;
-
-
 
 //import React, { Component } from 'react';
 //import logo from './logo.svg';
