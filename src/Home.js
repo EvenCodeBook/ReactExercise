@@ -29,8 +29,8 @@ class Home extends Component{
     getHomeList(style){
         let listActive =         
         <div className={style}>
-            <div className="App-home-list-active"><h1>Home1</h1></div>
-            <div className="App-home-list-active"><h1>Home2</h1></div>
+            <div className="App-home-list-active"><h1>Active1</h1></div>
+            <div className="App-home-list-active"><h1>Active2</h1></div>
         </div>;        
 
         return listActive;

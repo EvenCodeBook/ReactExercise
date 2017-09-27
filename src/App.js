@@ -2,6 +2,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from './Home';
+import { BrowserRouter as Router, Switch, Route, Link, Redirect, withRouter } from 'react-router-dom';
+
+
+
+
+
+
 
 class App extends Component{
   constructor(props){
@@ -49,6 +56,9 @@ class App extends Component{
 }
 
 export default App;
+
+
+
 
 //import React, { Component } from 'react';
 //import logo from './logo.svg';
