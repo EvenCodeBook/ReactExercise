@@ -3,23 +3,23 @@ import { BrowserRouter as Router, Switch, Route, Link, Redirect, withRouter } fr
 
 class ModalSwitch extends Component {
     
-      // We can pass a location to <Switch/> that will tell it to
-      // ignore the router's current location and use the location
-      // prop instead.
-      //
-      // We can also use "location state" to tell the app the user
-      // wants to go to `/img/2` in a modal, rather than as the
-      // main page, keeping the gallery visible behind it.
-      //
-      // Normally, `/img/2` wouldn't match the gallery at `/`.
-      // So, to get both screens to render, we can save the old
-      // location and pass it to Switch, so it will think the location
-      // is still `/` even though its `/img/2`.
+    //我們可以將一個位置傳遞給<Switch />，告訴它
+    //忽略路由器的當前位置並使用該位置
+    // prop代替。
+    //
+    //我們也可以使用"位置狀態"來告訴應用程序的用戶
+    //想以模態方式去"/img/2"而不是
+    //主頁面，保持畫廊可見
+    //
+    //通常，"/img/2"與'/'中的庫不匹配。
+    //所以，要讓兩個屏幕都可以渲染，我們可以保存舊的
+    //位置並將其傳遞給Switch，所以它會考慮位置
+    //仍然是'/'，即使它的"/img/2"。
       previousLocation = this.props.location
     
       componentWillUpdate(nextProps) {
         const { location } = this.props
-        // set previousLocation if props.location is not modal
+        // 如果props.location不是模態，請設置previousLocation
         if (
           nextProps.history.action !== 'POP' &&
           (!location.state || !location.state.modal)
@@ -75,9 +75,20 @@ class ModalSwitch extends Component {
         <Link to='/gallery'>Visit the Gallery</Link>
         <h2>Featured Images</h2>
         <ul>
-          <li><Link to='/img/2'>Tomato</Link></li>
-          <li><Link to='/img/4'>Crimson</Link></li>
+          <li><Link to='/img/0'>Tomato</Link></li>
+          <li><Link to='/img/1'>Crimson</Link></li>
+          <li><Link to='/img/2'>Crimson</Link></li>
+          <li><Link to='/img/3'>Crimson</Link></li>
         </ul>
+        <h2>Featured Images</h2>
+        <h2>Featured Images</h2>
+        <h2>Featured Images</h2>
+        <h2>Featured Images</h2>
+        <h2>Featured Images</h2>
+        <h2>Featured Images</h2>
+        <h2>Featured Images</h2>
+        <h2>Featured Images</h2>
+        <h2>Featured Images</h2>
       </div>
     )
     
@@ -152,6 +163,7 @@ class ModalSwitch extends Component {
         </div>
       )
     }
+    
     
     const ModalGallery = () => (
       <Router>

@@ -2,10 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import ModalGallery from './ModalGallery';
+import MyApp from './Test/MyApp';
 import registerServiceWorker from './registerServiceWorker';
 
 
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<MyApp />, document.getElementById('root'));
 registerServiceWorker();

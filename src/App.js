@@ -1,14 +1,9 @@
 
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link, Redirect, withRouter } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
-import { BrowserRouter as Router, Switch, Route, Link, Redirect, withRouter } from 'react-router-dom';
-
-
-
-
-
-
+import ModalGallery from './ModalGallery';
 
 class App extends Component{
   constructor(props){
@@ -19,7 +14,7 @@ class App extends Component{
   render(){
   let info = null;
   if(this.state.page === 0) info =<Home />;
-  else if(this.state.page === 1) info="search";
+  else if(this.state.page === 1) info=<ModalGallery />;
   else if(this.state.page === 2) info="about";
 
     return(
